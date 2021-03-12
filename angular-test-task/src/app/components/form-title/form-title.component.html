@@ -1,0 +1,97 @@
+<div class="form-title-container">
+    <h1 class="form-header">Form Title</h1>
+    <form [formGroup]="formTitleFields" class="inputs-form">
+        <div class="form-top">
+            <div>
+                <mat-form-field class="input-content-top" appearance="outline">
+                    <mat-label>Input Label</mat-label>
+                    <input 
+                        formControlName="inputLabelOne"
+                        matInput 
+                        class="input-inner-style"
+                    >
+                </mat-form-field>
+                <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelOne')?.invalid && (formTitleFields.get('inputLabelOne')?.dirty || formTitleFields.get('inputLabelOne')?.touched)" class="error-message">
+                    <div *ngIf="formTitleFields?.get('inputLabelOne').hasError('required')">
+                        Error message 1
+                    </div>
+                </mat-error>
+            </div>
+            <div>
+                <mat-form-field class="input-content-top" appearance="outline">
+                    <mat-label>Input Label</mat-label>
+                    <input 
+                        formControlName="inputLabelTwo"
+                        matInput 
+                        class="input-inner-style"
+                    >
+                </mat-form-field>
+                <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelTwo')?.invalid && (formTitleFields.get('inputLabelTwo')?.dirty || formTitleFields.get('inputLabelTwo')?.touched)" class="error-message">
+                    <div *ngIf="formTitleFields.get('inputLabelTwo')?.hasError('required')">
+                        Error message 2
+                    </div>
+                </mat-error>
+            </div>
+        </div>
+        <div class="radio-buttons-content">
+            <div class="radio-btn-content-left">
+                <h6>Experience with Angular 10-11</h6>
+                <mat-radio-group aria-label="Select an option" class="radio-group">
+                    <mat-radio-button value="1">No</mat-radio-button>
+                    <mat-radio-button class="radio-btn-right" checked>Yes</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="radio-btn-content-right">
+                <h6>Estimate for the task - 4h</h6>
+                <mat-radio-group aria-label="Select an option" class="radio-group">
+                    <mat-radio-button value="1">No</mat-radio-button>
+                    <mat-radio-button class="radio-btn-right" checked>Yes</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <div class="form-bottom">
+            <mat-form-field class="input-content" appearance="outline">
+                <mat-label>Input Label</mat-label>
+                <input 
+                    formControlName="inputLabelThree"
+                    matInput 
+                    class="input-inner-style"
+                >
+            </mat-form-field>
+            <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelThree')?.invalid && (formTitleFields.get('inputLabelThree')?.dirty || formTitleFields.get('inputLabelThree')?.touched)" class="error-message">
+                <div *ngIf="formTitleFields.get('inputLabelThree')?.hasError('required')">
+                    Error message 3
+                </div>
+            </mat-error>
+            <mat-form-field class="input-content" appearance="outline">
+                <mat-label>Input Label</mat-label>
+                <input 
+                    formControlName="inputLabelFour"
+                    matInput 
+                    class="input-inner-style"
+                >
+            </mat-form-field>
+            <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelFour')?.invalid && (formTitleFields.get('inputLabelFour')?.dirty || formTitleFields.get('inputLabelFour')?.touched)" class="error-message">
+                <div *ngIf="formTitleFields.get('inputLabelFour')?.hasError('required')">
+                    Error message 4
+                </div>
+            </mat-error>
+            <mat-form-field class="input-content" appearance="outline">
+                <mat-label>Input Label</mat-label>
+                <input 
+                    formControlName="inputLabelFive"
+                    matInput 
+                    class="input-inner-style"
+                >
+            </mat-form-field>
+            <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelFive')?.invalid && (formTitleFields.get('inputLabelFive')?.dirty || formTitleFields.get('inputLabelFive')?.touched)" class="error-message">
+                <div *ngIf="formTitleFields.get('inputLabelFive')?.hasError('required')">
+                    Error message 5
+                </div>
+            </mat-error>
+        </div>
+    </form>
+    <button class="form-submit-btn" (click)="submitForm()">
+        Next
+    </button>
+</div>

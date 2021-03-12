@@ -1,0 +1,121 @@
+.radio-input-container {
+    margin-top: 68px;
+    margin-left: 157px;
+    display: flex;
+    flex-direction: row;
+
+    .radio-content-left {
+        width: max-content;
+
+        .radio-inputs-title {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+        }
+        .enabled-radion-title {
+            font-size: 17px;
+            margin-top: 36px;
+        }
+    }
+
+    .radio-content-right {
+        margin-left: 142px;
+        width: max-content;
+        h4,
+        ul li {
+            color: #3A4BA6;
+            font-size: 36px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            font-weight: 500;
+        }
+
+        .radio-buttons-content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: -20px;
+            margin-bottom: 28px;
+
+            .radio-btn-content-left h6,
+            .radio-btn-content-right h6 {
+                font-size: 12px;
+                line-height: 14px;
+                color: #3A4BA6;
+            }
+
+            .radio-btn-content-left h6 {
+                margin-right: 28px;
+            }
+
+            .radio-btn-content-left,
+            .radio-btn-content-right {
+                mat-radio-group {
+                    .radio-btn-right {
+                        margin-left: 44px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.radio-group ::ng-deep {
+    .radio-btn {
+        margin-top: 27px;
+
+        .mat-radio-label {
+            font-size: 15px;
+            color: #263238;
+        }
+    }
+    .mat-radio-checked {
+        .mat-radio-label {
+            font-size: 15px;
+            .mat-radio-label-content {
+                color: #263238;
+            }
+
+            .mat-radio-container {
+                .mat-radio-outer-circle {
+                    border-color: #3A4BA6;
+                }
+                .mat-radio-inner-circle {
+                    background-color: #3A4BA6;
+                }
+                .mat-radio-ripple {
+                    .mat-radio-persistent-ripple {
+                        background-color: #3A4BA6;
+                    }
+                }
+            }
+        }
+    }
+
+    .mat-radio-disabled {
+        .mat-radio-label {
+            .mat-radio-label-content {
+                color: rgba(0,0,0,.38);
+            }
+
+            .mat-radio-container {
+                .mat-radio-outer-circle {
+                    border-color: rgba(0,0,0,.38);
+                }
+                .mat-radio-inner-circle {
+                    background-color: rgba(0,0,0,.38);
+                }
+                .mat-radio-ripple {
+                    .mat-radio-persistent-ripple {
+                        background-color: rgba(0,0,0,.38);
+                    }
+                }
+            }
+        }
+    }
+}

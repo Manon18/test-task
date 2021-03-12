@@ -1,0 +1,55 @@
+<div class="radio-input-container">
+    <div class="radio-content-left">
+        <h3 class="radio-inputs-title">4.2 Radio Inputs</h3>
+        <div>
+            <div class="enabled-radion-title">4.2.1 Enabled Unselected</div>
+            <mat-radio-group aria-label="Select an option" class="radio-group">
+                <mat-radio-button value="1" class="radio-btn">Radioinput Text</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div>
+            <div class="enabled-radion-title">4.2.2 Enabled Selected</div>
+            <mat-radio-group aria-label="Select an option" class="radio-group">
+                <mat-radio-button class="radio-btn" checked>Radioinput Text</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div>
+            <div class="enabled-radion-title">4.2.3 Disabled Unselected</div>
+            <mat-radio-group aria-label="Select an option" class="radio-group">
+                <mat-radio-button value="1" class="radio-btn" disabled>Radioinput Text</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div>
+            <div class="enabled-radion-title">4.2.4 Disabled Selected</div>
+            <mat-radio-group aria-label="Select an option" class="radio-group">
+                <mat-radio-button class="radio-btn" [checked]="isChecked" [disabled]="isDisabled">Radioinput Text</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </div>
+    <div class="radio-content-right">
+        <!-- <h4>Attention, Please!</h4>
+        <ul>
+            <li>1) Input Label and Error Message need to be done via parameters</li>
+            <li>2) Disabled Input need to be done via parameters</li>
+            <li>3) Validation: Fill or Empty</li>
+            <li>4) Input validation need to perform after Next button click</li>
+            <li>5) Input your Answer:</li>
+        </ul>
+        <div class="radio-buttons-content">
+            <div class="radio-btn-content-left">
+                <h6>Experience with Angular 10-11</h6>
+                <mat-radio-group aria-label="Select an option" class="radio-group">
+                    <mat-radio-button value="1">No</mat-radio-button>
+                    <mat-radio-button class="radio-btn-right" checked>Yes</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="radio-btn-content-right">
+                <h6>Estimate for the task - 4h</h6>
+                <mat-radio-group aria-label="Select an option" class="radio-group">
+                    <mat-radio-button value="1">No</mat-radio-button>
+                    <mat-radio-button class="radio-btn-right" checked>Yes</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div> -->
+    </div>
+</div>

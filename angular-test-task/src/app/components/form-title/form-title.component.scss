@@ -1,0 +1,106 @@
+.form-title-container {
+    background-color: rgba(38, 50, 56, 6%);
+    margin-left: 41px;
+    width: 640px;
+    padding-top: 40px;
+    padding-bottom: 124px;
+    margin-top: 66px;
+
+    .form-header {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #263238;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .inputs-form {
+        margin-left: 145px;
+        margin-right: 136px;
+        .form-top {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .input-content-top {
+                width: 169px;
+            }
+        }
+
+        .radio-buttons-content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: -20px;
+            margin-bottom: 28px;
+
+            .radio-btn-content-left h6,
+            .radio-btn-content-right h6 {
+                font-size: 12px;
+                line-height: 14px;
+                color: #3A4BA6;
+            }
+
+            .radio-btn-content-left h6 {
+                margin-right: 28px;
+            }
+
+            .radio-btn-content-left,
+            .radio-btn-content-right {
+                mat-radio-group {
+                    .radio-btn-right {
+                        margin-left: 44px;
+                    }
+                }
+            }
+        }
+
+        .form-bottom {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .form-submit-btn {
+        background: #3A4BA6;
+        border-radius: 20px;
+        width: 122px;
+        height: 36px;
+        border: none;
+        outline: none;
+        color: #fff;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+}
+
+.radio-group ::ng-deep {
+    .mat-radio-checked {
+        .mat-radio-label {
+            .mat-radio-container {
+                .mat-radio-outer-circle {
+                    border-color: #3A4BA6;
+                }
+                .mat-radio-inner-circle {
+                    background-color: #3A4BA6;
+                }
+                .mat-radio-ripple {
+                    .mat-radio-persistent-ripple {
+                        background-color: #3A4BA6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.error-message {
+    padding-left: 11px;
+    margin-top: -21px;
+    margin-bottom: 7px;
+}

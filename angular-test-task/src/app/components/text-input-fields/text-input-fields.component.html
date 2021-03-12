@@ -1,0 +1,82 @@
+<div class="inputs-container">
+    <h3 class="font-style-normal font-weight-bold form-elements-title">3. Form Elements</h3>
+    <hr>
+    <h4 class="text-input-title">3.1 Text Input</h4>
+    <form [formGroup]="textFields" class="inputs-form">
+        <div class="inputs-form-content">
+            <div>3.1.1 Default</div>
+            <mat-form-field class="input-content input-content-default" appearance="outline">
+                <mat-label class="mat-label-style">Input Label</mat-label>
+                <input 
+                    formControlName="default"
+                    matInput 
+                    class="input-inner-style"
+                >
+            </mat-form-field>
+        </div>
+        <div class="inputs-form-content">
+            <div>3.1.2 Focused</div>
+            <mat-form-field class="input-content input-content-focused" appearance="outline">
+                <mat-label class="mat-label-style">Input Label</mat-label>
+                <input 
+                    formControlName="focused"
+                    matInput 
+                    placeholder="Text that User is entering" 
+                    class="input-inner-style"
+                    autofocus
+                >
+            </mat-form-field>
+        </div>
+        <div class="inputs-form-content">
+            <div>3.1.2 Completed</div>
+            <mat-form-field class="input-content" appearance="outline">
+                <mat-label class="mat-label-style">Input Label</mat-label>
+                <input
+                    formControlName="completed"
+                    matInput 
+                    placeholder="Text entered, the input field is completed" 
+                    class="input-inner-style"
+                >
+            </mat-form-field>
+        </div>
+        <div class="inputs-form-content">
+            <div>3.1.4 Autoclear</div>
+            <mat-form-field class="input-content" appearance="outline">
+                <mat-label class="mat-label-style">Input Label</mat-label>
+                <input 
+                    formControlName="autoclear"
+                    matInput type="text" [(ngModel)]="value" class="input-inner-style">
+                <button class="close-icon" mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div class="inputs-form-content">
+            <div>3.1.5 Error</div>
+            <mat-form-field class="input-content input-content-error" appearance="outline">
+                <mat-label class="mat-label-style">Input Label</mat-label>
+                <input 
+                    formControlName="errorField"
+                    matInput type="text" class="input-inner-style"
+                >
+            </mat-form-field>
+            <mat-error *ngIf="formTextFieldsControls?.errorField?.invalid && (formTextFieldsControls?.errorField?.dirty || formTextFieldsControls?.errorField?.touched)" class="error-message">
+                <div *ngIf="formTextFieldsControls?.errorField?.errors.required">
+                    Error message
+                </div>
+            </mat-error>
+        </div>
+        <div class="inputs-form-content">
+            <div>3.1.6 Disabled</div>
+            <mat-form-field class="input-content input-content-disabled" appearance="outline">
+                <mat-label class="mat-label-style">Input Label</mat-label>
+                <input
+                    formControlName="disabled"
+                    matInput
+                    class="input-inner-style"
+                    type="text"
+                >
+            </mat-form-field>
+        </div>
+    </form>
+</div>
