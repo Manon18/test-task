@@ -1,34 +1,36 @@
 <div class="form-title-container">
     <h1 class="form-header">Form Title</h1>
-    <form [formGroup]="formTitleFields" class="inputs-form">
+    <form [formGroup]="formTitleFields" class="inputs-form" (ngSubmit)="submitForm()">
         <div class="form-top">
             <div>
                 <mat-form-field class="input-content-top" appearance="outline">
-                    <mat-label>Input Label</mat-label>
+                    <mat-label>{{ inputLabels.label }}</mat-label>
                     <input 
                         formControlName="inputLabelOne"
                         matInput 
                         class="input-inner-style"
+                        [errorStateMatcher]="matcher"
                     >
                 </mat-form-field>
                 <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelOne')?.invalid && (formTitleFields.get('inputLabelOne')?.dirty || formTitleFields.get('inputLabelOne')?.touched)" class="error-message">
                     <div *ngIf="formTitleFields?.get('inputLabelOne').hasError('required')">
-                        Error message 1
+                        {{ errorMessages.errorMessageOne }}
                     </div>
                 </mat-error>
             </div>
             <div>
                 <mat-form-field class="input-content-top" appearance="outline">
-                    <mat-label>Input Label</mat-label>
+                    <mat-label>{{ inputLabels.label }}</mat-label>
                     <input 
                         formControlName="inputLabelTwo"
                         matInput 
                         class="input-inner-style"
+                        [errorStateMatcher]="matcher"
                     >
                 </mat-form-field>
                 <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelTwo')?.invalid && (formTitleFields.get('inputLabelTwo')?.dirty || formTitleFields.get('inputLabelTwo')?.touched)" class="error-message">
                     <div *ngIf="formTitleFields.get('inputLabelTwo')?.hasError('required')">
-                        Error message 2
+                        {{ errorMessages.errorMessageTwo }}
                     </div>
                 </mat-error>
             </div>
@@ -51,47 +53,48 @@
         </div>
         <div class="form-bottom">
             <mat-form-field class="input-content" appearance="outline">
-                <mat-label>Input Label</mat-label>
+                <mat-label>{{ inputLabels.label }}</mat-label>
                 <input 
                     formControlName="inputLabelThree"
                     matInput 
                     class="input-inner-style"
+                    [errorStateMatcher]="matcher"
                 >
             </mat-form-field>
             <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelThree')?.invalid && (formTitleFields.get('inputLabelThree')?.dirty || formTitleFields.get('inputLabelThree')?.touched)" class="error-message">
                 <div *ngIf="formTitleFields.get('inputLabelThree')?.hasError('required')">
-                    Error message 3
+                    {{ errorMessages.errorMessageThree }}
                 </div>
             </mat-error>
             <mat-form-field class="input-content" appearance="outline">
-                <mat-label>Input Label</mat-label>
+                <mat-label>{{ inputLabels.label }}</mat-label>
                 <input 
                     formControlName="inputLabelFour"
                     matInput 
                     class="input-inner-style"
+                    [errorStateMatcher]="matcher"
                 >
             </mat-form-field>
             <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelFour')?.invalid && (formTitleFields.get('inputLabelFour')?.dirty || formTitleFields.get('inputLabelFour')?.touched)" class="error-message">
                 <div *ngIf="formTitleFields.get('inputLabelFour')?.hasError('required')">
-                    Error message 4
+                    {{ errorMessages.errorMessageFour }}
                 </div>
             </mat-error>
             <mat-form-field class="input-content" appearance="outline">
-                <mat-label>Input Label</mat-label>
+                <mat-label>{{ inputLabels.label }}</mat-label>
                 <input 
                     formControlName="inputLabelFive"
                     matInput 
                     class="input-inner-style"
+                    [errorStateMatcher]="matcher"
                 >
             </mat-form-field>
             <mat-error *ngIf="isBtnSubmitted && formTitleFields.get('inputLabelFive')?.invalid && (formTitleFields.get('inputLabelFive')?.dirty || formTitleFields.get('inputLabelFive')?.touched)" class="error-message">
                 <div *ngIf="formTitleFields.get('inputLabelFive')?.hasError('required')">
-                    Error message 5
+                    {{ errorMessages.errorMessageFive }}
                 </div>
             </mat-error>
         </div>
+        <input class="form-submit-btn" type="submit" value="Next"/>
     </form>
-    <button class="form-submit-btn" (click)="submitForm()">
-        Next
-    </button>
 </div>

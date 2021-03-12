@@ -10,6 +10,23 @@ export class TextInputFieldsComponent implements OnInit {
   public value: string = 'Text entered, the input field is completed';
   public textFields: FormGroup;
 
+  public inputStatesFields = {
+    default: 'Default',
+    focused: 'Focused',
+    completed: 'Completed',
+    autoclear: 'Autoclear',
+    errorF: 'Error',
+    disabled: 'Disabled'
+  }
+
+  public inputLabels = {
+    label: 'Input Label'
+  }
+
+  public errorMessage = {
+    errorM: 'Error message'
+  }
+
   constructor() { }
 
   public ngOnInit(): void {

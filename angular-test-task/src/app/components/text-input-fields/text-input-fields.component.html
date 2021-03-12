@@ -1,12 +1,9 @@
 <div class="inputs-container">
-    <h3 class="font-style-normal font-weight-bold form-elements-title">3. Form Elements</h3>
-    <hr>
-    <h4 class="text-input-title">3.1 Text Input</h4>
     <form [formGroup]="textFields" class="inputs-form">
         <div class="inputs-form-content">
-            <div>3.1.1 Default</div>
+            <div>{{ inputStatesFields.default }}</div>
             <mat-form-field class="input-content input-content-default" appearance="outline">
-                <mat-label class="mat-label-style">Input Label</mat-label>
+                <mat-label class="mat-label-style">{{ inputLabels.label }}</mat-label>
                 <input 
                     formControlName="default"
                     matInput 
@@ -15,9 +12,9 @@
             </mat-form-field>
         </div>
         <div class="inputs-form-content">
-            <div>3.1.2 Focused</div>
+            <div>{{ inputStatesFields.focused }}</div>
             <mat-form-field class="input-content input-content-focused" appearance="outline">
-                <mat-label class="mat-label-style">Input Label</mat-label>
+                <mat-label class="mat-label-style">{{ inputLabels.label }}</mat-label>
                 <input 
                     formControlName="focused"
                     matInput 
@@ -28,9 +25,9 @@
             </mat-form-field>
         </div>
         <div class="inputs-form-content">
-            <div>3.1.2 Completed</div>
+            <div>{{ inputStatesFields.completed }}</div>
             <mat-form-field class="input-content" appearance="outline">
-                <mat-label class="mat-label-style">Input Label</mat-label>
+                <mat-label class="mat-label-style">{{ inputLabels.label }}</mat-label>
                 <input
                     formControlName="completed"
                     matInput 
@@ -40,9 +37,9 @@
             </mat-form-field>
         </div>
         <div class="inputs-form-content">
-            <div>3.1.4 Autoclear</div>
+            <div>{{ inputStatesFields.autoclear }}</div>
             <mat-form-field class="input-content" appearance="outline">
-                <mat-label class="mat-label-style">Input Label</mat-label>
+                <mat-label class="mat-label-style">{{ inputLabels.label }}</mat-label>
                 <input 
                     formControlName="autoclear"
                     matInput type="text" [(ngModel)]="value" class="input-inner-style">
@@ -52,9 +49,9 @@
             </mat-form-field>
         </div>
         <div class="inputs-form-content">
-            <div>3.1.5 Error</div>
+            <div>{{ inputStatesFields.errorF }}</div>
             <mat-form-field class="input-content input-content-error" appearance="outline">
-                <mat-label class="mat-label-style">Input Label</mat-label>
+                <mat-label class="mat-label-style">{{ inputLabels.label }}</mat-label>
                 <input 
                     formControlName="errorField"
                     matInput type="text" class="input-inner-style"
@@ -62,14 +59,14 @@
             </mat-form-field>
             <mat-error *ngIf="formTextFieldsControls?.errorField?.invalid && (formTextFieldsControls?.errorField?.dirty || formTextFieldsControls?.errorField?.touched)" class="error-message">
                 <div *ngIf="formTextFieldsControls?.errorField?.errors.required">
-                    Error message
+                    {{ errorMessage.errorM }}
                 </div>
             </mat-error>
         </div>
         <div class="inputs-form-content">
-            <div>3.1.6 Disabled</div>
+            <div>{{ inputStatesFields.disabled }}</div>
             <mat-form-field class="input-content input-content-disabled" appearance="outline">
-                <mat-label class="mat-label-style">Input Label</mat-label>
+                <mat-label class="mat-label-style">{{ inputLabels.label }}</mat-label>
                 <input
                     formControlName="disabled"
                     matInput
